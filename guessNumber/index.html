@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>guess</title>
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+ 
+  <div class="gameGuessNumber">
+      <label for="input" class="label gameTips ">猜数字</label>
+      <input type="number" class="input" id="input" placeholder="请输入 1 ~ 100 的数字" >
+      <input type="submit" value="确定" class="submit">
+
+      <!-- <div class="gameTips left">
+       <span>我选定了一个随机数, 看你能否在10此以内猜到, 每次我都会告诉你所猜结果是大还是小</span>
+      </div>
+ -->
+      <div class="result">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="tips"></p>    
+      </div> 
+  </div>
+  
+
+ <script src="../jquery/jquery-3.3.1.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

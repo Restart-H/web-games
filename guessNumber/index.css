@@ -1,0 +1,75 @@
+body{
+  font-size: 16px;
+  padding-top: 3em;
+}
+
+.gameGuessNumber{
+  width: 300px;
+  height: 300px;
+  background: rgba(0,0,0,.2);
+  border-radius: 2em;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.label{
+  display: block;
+  width: 200px;
+  margin: 0 auto 10px;
+  text-align: center;
+
+}
+.gameTips::after{
+  content: '我选定了一个 100 以内的自然数, 看你能否在 10 次以内猜到, 每次我都会告诉你所猜结果是大还是小';
+  /*display: block;*/
+  position: absolute;
+  top: -2em;
+  left: -6em;
+  width: 12em;
+  height: 6em;
+  text-align: center;
+  padding: .5em;
+  background: rgba(157,217,231,.7);
+  border-radius: .5em;
+  
+  opacity: 0;
+  transition: all .5s ease-in;
+}
+.show::after{
+  opacity: 1;
+}
+input,button{
+  display: block;
+  outline: none;
+  width: 200px;
+  margin: 0 auto 10px;
+  border-radius: 5px;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+input[type='number']{
+  -moz-appearance: textfield;
+}
+
+.guesses{
+  height: 3em;
+}
+.lastResult, .tips{
+  text-align: center;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 5px;
+}
+
+.lastResult.win{
+  background: green;
+}
+.lastResult.lose{
+  background: red;
+}
+.resBtn{
+  border-radius: 5px;
+}
